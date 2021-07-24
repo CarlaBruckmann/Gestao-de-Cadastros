@@ -28,10 +28,11 @@
     <title>Cadastro de Produtos</title>
   </head>
   <body>
-    <header role="banner">Novo Produto</header>
-
     <main role="main">
+      <header role="banner">Novo Produto</header>
+
       <form id="produto_form">
+        <label for="produto_cod">Código:</label>
         <input
           type="text"
           id="produto_cod"
@@ -39,6 +40,7 @@
           placeholder="Código"
           required
         />
+        <label for="produto_nome">Produto:</label>
         <input
           type="text"
           id="produto_nome"
@@ -46,6 +48,7 @@
           placeholder="Produto"
           required
         />
+        <label for="produto_qtd">Quantidade:</label>
         <input
           type="number"
           id="produto_qtd"
@@ -54,6 +57,7 @@
           min="0"
           required
         />
+        <label for="produto_valor">Valor de Compra:</label>
         <input
           type="text"
           id="produto_valor"
@@ -61,6 +65,7 @@
           placeholder="Valor de Compra"
           required
         />
+        <label for="produto_loja">Loja:</label>
         <input
           type="Text"
           id="produto_loja"
@@ -68,18 +73,14 @@
           placeholder="Loja"
           required
         />
-        <input
-          type="submit"
-          id="submit_produto"
-          value="Salvar"
-        />
+        <input type="submit" id="submit_produto" value="Salvar" />
         <!-- continua no cadastro-->
         <a href="../index.html" name="">Cancelar</a>
         <!-- para Pagina Inicial -->
         <p id="mensagem"></p>
       </form>
     </main>
-    
+
     <footer role="contentinfo">
       <p>Made by Carla Bruckmann | 2021</p>
       <a
