@@ -28,30 +28,89 @@
     <title>Cadastro de Clientes</title>
   </head>
   <body>
-    <header role="banner">Cadastro de Clientes</header>
+    <header role="banner">Novo Cliente</header>
+
     <main role="main">
-      <a href="./form.html" name="">Cadastrar Cliente</a>
-      <!-- id da page - form clientes-->
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
-            <th>Cidade</th>
-            <th>UF</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr id="tabDados">
-            </tr>
-        </tbody>
-      </table>
-      <a href="../index.html" name="">Voltar</a>
-      <!-- para Home-->
+      <form id="cliente_form">
+        <input
+          type="text"
+          id="cliente_nome"
+          name="cliente_nome"
+          placeholder="Nome"
+          required
+        />
+        <input
+          type="text"
+          id="cliente_cpf"
+          name="cliente_cpf"
+          placeholder="CPF"
+          max-length="11"
+          required
+        />
+        <input
+          type="tel"
+          id="cliente_tel"
+          name="cliente_tel"
+          placeholder="Telefone"
+          required
+        />
+        <input
+          type="email"
+          id="cliente_email"
+          name="cliente_email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="text"
+          id="cliente_cidade"
+          name="cliente_cidade"
+          placeholder="Cidade"
+          required
+        />
+        <select id="cliente_UF" name="cliente_UF">
+          <option value="">Estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        <input
+        type="submit"
+          id="submit_cliente"
+          value="Salvar"
+        />
+        <!-- continua no cadastro -->
+        <a href="../index.html" name="">Cancelar</a>
+        <!-- para Pagina Inicial -->
+        <p id="mensagem"></p>
+      </form>
+      
     </main>
+
     <footer role="contentinfo">
       <p>Made by Carla Bruckmann | 2021</p>
       <a

@@ -1,13 +1,38 @@
-//PRECISO PEGAR OS ITENS E JOGAR NA TELA. 
+const clienteForm = document.getElementById("cliente_form");
+clienteForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  let nome = document.getElementById("cliente_nome").value;
+  let cpf = document.getElementById("cliente_cpf").value;
+  let telefone = document.getElementById("cliente_tel").value;
+  let email = document.getElementById("cliente_email").value;
+  let cidade = document.getElementById("cliente_cidade").value;
+  let estado = document.getElementById("cliente_UF").value;
+
+  let clienteData = {
+    nome,
+    cpf,
+    telefone,
+    email,
+    cidade,
+    estado,
+  };
+
+  let convertClienteData = JSON.stringify(clienteData);
+  localStorage.setItem("cliente", convertClienteData);
 
 
-// let dadosCliente = window.localStorage.getItem('lead');
-// let dadosArr = JSON.parse(dadosCliente);
-// let tabDadosNome = dadosArr.nome;
-
-
-
-
-// console.log(tabDadosNome)
-// console.log(dadosArr.cpf)
+let mensagem = document.getElementById('mensagem');
+  mensagem.innerHTML = 'Carregando..'
+  document.getElementById('cliente_nome').value = '';
+  document.getElementById("cliente_cpf").value = '';
+  document.getElementById("cliente_tel").value = '';
+  document.getElementById("cliente_email").value = '';
+  document.getElementById("cliente_cidade").value = '';
+  document.getElementById("cliente_UF").value = '';
+  
+  setTimeout(() => {
+      mensagem.innerHTML = 'Cadastro efetuado com sucesso!'   
+  }, 1000) 
+})
 

@@ -18,4 +18,17 @@ produtoForm.addEventListener("submit", (e) => {
 
   let convertProdutoData = JSON.stringify(produtoData);
   localStorage.setItem("produto", convertProdutoData);
+
+  
+  let mensagem = document.getElementById('mensagem');
+  mensagem.innerHTML = 'Carregando..'
+  document.getElementById("produto_cod").value = '';
+  document.getElementById("produto_nome").value = '';
+  document.getElementById("produto_qtd").value = '';
+  document.getElementById("produto_valor").value = '';
+  document.getElementById("produto_loja").value = '';
+  
+  setTimeout(() => {
+      mensagem.innerHTML = 'Cadastro efetuado com sucesso!'   
+  }, 1000) 
 });
