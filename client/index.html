@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Carla Bruckmann" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon_io/site.webmanifest" />
+  <title>Cadastro de Clientes</title>
+</head>
+
+<body>
+  <main role="main">
+    <header role="banner">Novo Cliente</header>
+
+    <form id="cliente_form">
+      <label for="cliente_nome">Nome Completo:</label>
+      <input type="text" id="cliente_nome" name="cliente_nome" placeholder="Nome Completo" required />
+      <label for="cliente_cpf">CPF:</label>
+      <input type="text" id="cliente_cpf" name="cliente_cpf" placeholder="xxx.xxx.xxx-xx" max-length="11"
+        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
+      <label for="cliente_tel">Celular:</label>
+      <input type="tel" id="cliente_tel" name="cliente_tel" placeholder="xx 9xxxx-xxxx"
+        pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required />
+      <label for="cliente_email">Email:</label>
+      <input type="email" id="cliente_email" name="cliente_email" placeholder="Email" required />
+      <label for="cliente_cidade">Cidade:</label>
+      <input type="text" id="cliente_cidade" name="cliente_cidade" placeholder="Cidade" required />
+      <label for="cliente_UF">UF:</label>
+      <select id="cliente_UF" name="cliente_UF">
+        <option value="">Estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+      <div class="container-botoes">
+        <input type="submit" id="submit_cliente" value="Salvar" class="btn-form-verde" />
+        <!-- continua no cadastro -->
+        <a href="../index.html" name="" class="btn-form-verm">Cancelar</a>
+        <!-- para Pagina Inicial -->
+        <p id="mensagem"></p>
+      </div>
+    </form>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Made by Carla Bruckmann | 2021</p>
+    <a title="GitHub" href="https://github.com/CarlaBruckmann" class="fab fa-github"></a>
+    <a title="Linkedin" href="https://www.linkedin.com/in/carla-bruckmann-271576ba/" class="fab fa-linkedin"></a>
+  </footer>
+  <script src="https://kit.fontawesome.com/ec6c9f4d17.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

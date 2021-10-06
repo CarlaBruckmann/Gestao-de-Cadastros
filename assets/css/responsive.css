@@ -7,18 +7,3 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-@media screen and (max-width: 700px) {
-  header {
-    font-size: 34px;
-    transition: var(--transition);
-  }
-  .container-botoes,
-  .container-botoes-home {
-    display: flex;
-    flex-direction: column;
-    transition: var(--transition);
-  }
-  .btn-form-verm {
-    margin: 20px 0 0 0px;
-  }
-}

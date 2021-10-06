@@ -1,22 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap");
-:root {
-  --font-titulo: 700 36px "Merriweather";
-  --font-botoes: 500 30px "Fira Sans";
-  --font-label: 400 25px "Fira Sans";
-  --font-input: 300 20px "Fira Sans";
-  --font-texto: 300 20px "Fira Sans";
-  --font-footer: 300 15px "Fira Sans";
-  --background-card: rgba(255, 255, 255, 0.49);
+:root{
   --background-gradient: linear-gradient(
     68deg,
     rgba(25, 100, 243, 0.3) 35.43%,
     rgba(0, 172, 193, 0.3) 100%
   );
-  --background-botoes: rgba(255, 255, 255, 0.14);
-  --botoes-background-hover: #ffffff;
-  --botoes-verm-hover: 1px solid #ff0000;
-  --botoes-verde-hover: 1px solid #00ff47;
+  --background-card: rgba(255, 255, 255, 0.49);
+  --background-button: rgba(255, 255, 255, 0.14);
+  --background-button-hover: #ffff; 
+  --color-font: rgb(17, 17, 17); 
+  --color-footer-contact: #ffff;
 }
 * {
   padding: 0;
@@ -24,123 +18,44 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-html{
-    background-color:#ffff;
-}
-body {
-  background: var(--background-gradient);
+body{
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: var(--background-gradient);
 }
-main {
-  background: var(--background-card);
-  width: 80%;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card{
+ background: var(--background-card);
+ border: solid 1px #ffff;
+ border-radius: 0 50px 0 0;
+}
+.button{
+  background: var(--background-button);
   border: solid 1px #ffff;
-  border-radius: 0 50px 0 0;
-  padding: 30px 10px 40px 10px;
-  margin: 10% auto;
 }
-header {
-  font: var(--font-titulo);
-  margin: 15px 10px 50px 10px;
-  text-align: center;
-}
-img{
-    margin: 100px 10px 10px 10px;
-    width: 100%;
-    height: 100%;
-}
-.btn-home {
-  font: var(--font-botoes);
-  padding: 10px 50px;
-  margin: 20px;
+.button:hover{
+  background-color: var(--background-button-hover);
   border: solid 1px #ffff;
-  border-radius: 50px;
-  color: rgb(0, 0, 0);
-  background: var(--background-botoes);
 }
-.btn-home:hover,
-.btn-home:focus,
-.btn-form-verde:hover,
-.btn-form-verde:focus, 
-.btn-form-verm:hover,
-.btn-form-verm:focus {
-  background-color: var(--botoes-background-hover);
+.title-font{
+  font-family:"Merriweather";
+  color: var(--color-font);
 }
-form{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.button-font{
+  font-family: "Fira Sans";
+  font-weight: 500;
+  color: --color-font;
 }
-label{
-    font: var(--font-label);
-    margin: 5px 0;
+.margin{
+  margin: 3%;
 }
-form input,
-form select{
-    width: 100%;
-    font: var(--font-input);
-    margin-bottom: 15px;
-    border: solid 1px #ffff;
-    color: #000;
-    border-radius: 50px;
-    padding: 5px 10px;
-    outline: none;
+.padding-top{
+  padding: 5%;
 }
-.container-botoes{
-    margin-top: 40px;
-}
-.btn-form-verde,
-.btn-form-verm{
-    font: var(--font-botoes);
-    border: solid 1px #ffff;
-    border-radius: 50px;
-    background-color: var(--background-botoes);
-}
-.btn-form-verde{
-    width: 200px;
-    cursor: pointer;
-}
-.btn-form-verm{
-    width: 200px;
-    padding: 6px 40px;
-    color: #000;
-    margin-left: 30px;
-}
-.btn-form-verde:hover,
-.btn-form-verde:focus{
-    border: var(--botoes-verde-hover);
-}
-.btn-form-verm:hover,
-.btn-form-verm:focus{
-    border: var(--botoes-verm-hover);
-}
-main p{
-    color: red;
-    font: var(--font-texto);
-    margin-top: 20px;
-}
-footer {
-  display: flex;
-  flex-direction: row;
-  font: var(--font-footer);
-  margin: 0px 10px 10px 10px;
-  color: rgba(255, 255, 255, 0.548);
-}
-footer a{
-    font-size: 20px;
-    margin: 0 5px;
-    color: rgba(255, 255, 255, 0.548);
-}
-footer a:hover,
-footer a:focus{
-    color: #000;
+.footer,
+.icon-contact{
+  background-color:  inherit;
+  padding-top:0;
+  color: var(--color-footer-contact);
+  font-size: 16px;
 }
