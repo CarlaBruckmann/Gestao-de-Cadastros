@@ -1,25 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Carla Bruckmann" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon_io/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon_io/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon_io/favicon-16x16.png" />
   <link rel="manifest" href="../assets/favicon_io/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
   <title>Cadastro de Clientes</title>
 </head>
 
 <body>
-  <main role="main">
-    <header role="banner">Novo Cliente</header>
+  <main role="main" class="container p-6">
+    <div class="card p-6">
+      <h1 class="has-text-centered title is-size-2 is-size-3-mobile title-font">
+        Cadastro de Clientes
+      </h1>
+      <a href="" class="button is-large is-rounded button-font button-green mx-1 my-5">Cadastrar Cliente</a>
 
-    <form id="cliente_form">
+      <table class="table is-hoverable is-fullwidth my-5">
+        <thead>
+          <tr>
+            <th title="Nome">Nome</th>
+            <th title="CPF">CPF</th>
+            <th title="Telefone">Telefone</th>
+            <th title="Email">Email</th>
+            <th title="Cidade">Cidade</th>
+            <th title="UF">UF</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Carla Bruckmann</td>
+            <td>000.000.000-00</td>
+            <td>(00)000000000</td>
+            <td>email@email.com</td>
+            <td>Florianópolis</td>
+            <td>SC</td>
+            <td class="is-flex is-flex-direction-row">
+              <button class="button is-warning is-outlined">
+                <span>Editar</span>
+              </button>
+              <button class="button is-danger is-outlined ml-5">
+                <span>Excluir</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="../index.html" class="button is-large is-rounded button-font button-red mx-1 my-5">Voltar</a>
+    </div>
+  </main>
+  <!-- ALTERAR PARA MODAL -->
+  <!--<header role="banner">Novo Cliente</header>
+
+     <form id="cliente_form">
       <label for="cliente_nome">Nome Completo:</label>
       <input type="text" id="cliente_nome" name="cliente_nome" placeholder="Nome Completo" required />
       <label for="cliente_cpf">CPF:</label>
@@ -65,18 +107,22 @@
       </select>
       <div class="container-botoes">
         <input type="submit" id="submit_cliente" value="Salvar" class="btn-form-verde" />
-        <!-- continua no cadastro -->
+       
         <a href="../index.html" name="" class="btn-form-verm">Cancelar</a>
-        <!-- para Pagina Inicial -->
+        
         <p id="mensagem"></p>
       </div>
-    </form>
-  </main>
+    </form>-->
 
-  <footer role="contentinfo">
-    <p>Made by Carla Bruckmann | 2021</p>
-    <a title="GitHub" href="https://github.com/CarlaBruckmann" class="fab fa-github"></a>
-    <a title="Linkedin" href="https://www.linkedin.com/in/carla-bruckmann-271576ba/" class="fab fa-linkedin"></a>
+  <footer role="contentinfo" class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Made by Carla Bruckmann | 2021
+        <a title="GitHub" href="https://github.com/CarlaBruckmann" class="fab fa-github icon-contact"></a>
+        <a title="Linkedin" href="https://www.linkedin.com/in/carla-bruckmann-271576ba/"
+          class="fab fa-linkedin icon-contact"></a>
+      </p>
+    </div>
   </footer>
   <script src="https://kit.fontawesome.com/ec6c9f4d17.js" crossorigin="anonymous"></script>
   <script src="./index.js"></script>
