@@ -24,6 +24,17 @@ body{
   min-height: 100vh;
   background: var(--background-gradient);
 }
+/* fontes */
+.title-font{
+  font-family:"Merriweather";
+  color: var(--color-font);
+}
+.button-font{
+  font-family: "Fira Sans";
+  font-weight: 500;
+  color: --color-font;
+}
+/* elementos */
 .card{
  background: var(--background-card);
  border: solid 1px #ffff;
@@ -37,20 +48,11 @@ body{
   background-color: var(--background-button-hover);
   border: solid 1px #ffff;
 }
-.title-font{
-  font-family:"Merriweather";
-  color: var(--color-font);
+.button-green:hover{
+  border: solid 1px greenyellow;
 }
-.button-font{
-  font-family: "Fira Sans";
-  font-weight: 500;
-  color: --color-font;
-}
-.margin{
-  margin: 3%;
-}
-.padding-top{
-  padding: 5%;
+.button-red:hover{
+  border: solid 1px red;
 }
 .footer,
 .icon-contact{
