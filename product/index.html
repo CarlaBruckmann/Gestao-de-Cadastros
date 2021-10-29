@@ -1,104 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Carla Bruckmann" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="../assets/favicon_io/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <title>Cadastro de Clientes</title>
-  </head>
-  <body>
-    <main role="main" class="container p-6">
-      <div class="card p-6">
-        <h1
-          class="has-text-centered title is-size-2 is-size-3-mobile title-font"
-        >
-          Cadastro de Produtos
-        </h1>
-        <button
-        id="btnOpenModal" onclick="openModal()"
-          class="button is-large is-rounded button-font button-green mx-1 my-5"
-          >Cadastrar Produto</button
-        >
 
-        <table class="table is-hoverable is-fullwidth my-5">
-          <thead>
-            <tr>
-              <th title="Código">Código</th>
-              <th title="Descrição">Descrição</th>
-              <th title="Quantidade">Quantidade</th>
-              <th title="ValorCompra">Valor de Compra</th>
-              <th title="Loja">Loja</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>M12020</td>
-              <td>Macbook Air 13.3</td>
-              <td>2</td>
-              <td>9.599,00</td>
-              <td>Iplace FLN</td>
-              <td class="is-flex is-flex-direction-row">
-                <button class="button is-warning is-outlined">
-                  <span>Editar</span>
-                </button>
-                <button class="button is-danger is-outlined ml-5">
-                  <span>Excluir</span>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Carla Bruckmann" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon_io/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Cadastro de Clientes</title>
+</head>
 
-        <a
-          href="../index.html"
-          class="button is-large is-rounded button-font mx-1 my-5"
-          >Voltar</a
-        >
+<body>
+  <main role="main" class="container p-6">
+    <div class="card p-6">
+      <h1 class="has-text-centered title is-size-2 is-size-3-mobile title-font">
+        Cadastro de Produtos
+      </h1>
+      <button id="btnOpenModal" onclick="openModal()"
+        class="button is-large is-rounded button-font button-green mx-1 my-5">
+        Cadastrar Produto
+      </button>
+
+      <table class="table is-hoverable is-fullwidth my-5">
+        <thead>
+          <tr>
+            <th title="Código">Código</th>
+            <th title="Descrição">Descrição</th>
+            <th title="Quantidade">Quantidade</th>
+            <th title="ValorCompra">Valor de Compra</th>
+            <th title="Loja">Loja</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M12020</td>
+            <td>Macbook Air 13.3</td>
+            <td>2</td>
+            <td>9.599,00</td>
+            <td>Iplace FLN</td>
+            <td class="is-flex is-flex-direction-row">
+              <button class="button is-warning is-outlined">
+                <span>Editar</span>
+              </button>
+              <button class="button is-danger is-outlined ml-5">
+                <span>Excluir</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="../index.html" class="button is-large is-rounded button-font mx-1 my-5">Voltar</a>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="p-6">
+          <h2 class="has-text-centered title is-size-3 is-size-4-mobile title-font">Novo Cliente</h2>
+        </header>
+        <section class="p-6">
+          <p>Modal funcionando</p>
+        </section>
+        <footer class="p-6">
+          <button class="button is-large is-rounded button-font mx-1 my-5 button-green">Salvar</button>
+          <button id="closeModal" onclick="closeModal()" class="button is-large is-rounded button-font mx-1 my-5 ml-5 button-red">
+            Cancelar
+          </button>
+        </footer>
       </div>
+    </div>
+  </main>
 
-      <div id="modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <section class="modal-card-body">
-            <p>Modal funcionando</p>
-          </section>
-          <footer class="modal-card-foot">
-            <button class="button is-success">Save changes</button>
-            <button id="closeModal" onclick="closeModal()" class="button">
-              Cancel
-            </button>
-          </footer>
-        </div>
-      </div>
-    </main>
-
-    <!-- ALTERAR PARA MODAL -->
-    <!--<header role="banner">Novo Produto</header>
+  <!-- ALTERAR PARA MODAL -->
+  <!--<header role="banner">Novo Produto</header>
 
       <form id="produto_form">
         <label for="produto_cod">Código:</label>
@@ -151,27 +132,8 @@
         </div>
       </form> -->
 
-    <footer role="contentinfo" class="footer">
-      <div class="content has-text-centered">
-        <p>
-          Made by Carla Bruckmann | 2021
-          <a
-            title="GitHub"
-            href="https://github.com/CarlaBruckmann"
-            class="fab fa-github icon-contact"
-          ></a>
-          <a
-            title="Linkedin"
-            href="https://www.linkedin.com/in/carla-bruckmann-271576ba/"
-            class="fab fa-linkedin icon-contact"
-          ></a>
-        </p>
-      </div>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/ec6c9f4d17.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./index.js"></script>
-  </body>
+  <script src="https://kit.fontawesome.com/ec6c9f4d17.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
 </html>
