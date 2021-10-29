@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <title>Cadastro de Clientes</title>
 </head>
-
 <body>
   <main role="main" class="container p-6">
     <div class="card p-6">
@@ -25,7 +24,6 @@
         class="button is-large is-rounded button-font button-green mx-1 my-5">
         Cadastrar Produto
       </button>
-
       <table class="table is-hoverable is-fullwidth my-5">
         <thead>
           <tr>
@@ -45,84 +43,73 @@
             <td>9.599,00</td>
             <td>Iplace FLN</td>
             <td class="is-flex is-flex-direction-row">
-              <button class="button is-warning is-outlined">
+              <button class="button is-warning is-outlined is-rounded">
                 <span>Editar</span>
               </button>
-              <button class="button is-danger is-outlined ml-5">
+              <button class="button is-danger is-outlined is-rounded ml-5">
                 <span>Excluir</span>
               </button>
             </td>
           </tr>
         </tbody>
       </table>
-
       <a href="../index.html" class="button is-large is-rounded button-font mx-1 my-5">Voltar</a>
     </div>
-
     <div id="modal" class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="p-6">
-          <h2 class="has-text-centered title is-size-3 is-size-4-mobile title-font">Novo Cliente</h2>
+          <h2 class="
+                has-text-centered
+                title
+                is-size-3 is-size-4-mobile
+                title-font
+              ">
+            Novo Produto
+          </h2>
         </header>
-        <section class="p-6">
-          <p>Modal funcionando</p>
+        <section class="px-6">
+          <form class="is-flex is-flex-direction-column">
+            <label class="is-size-5" for="produto_cod">Código:</label>
+            <input type="text" id="produto_cod" name="produto_cod" class="is-size-6 px-1 py-2 mb-5" placeholder="Código"
+              required />
+            <label class="is-size-5" for="produto_nome">Produto:</label>
+            <input type="text" id="produto_nome" name="produto_nome" class="is-size-6 px-1 py-2 mb-5"
+              placeholder="Produto" required />
+            <label class="is-size-5" for="produto_qtd">Quantidade:</label>
+            <input type="number" id="produto_qtd" name="produto_qtd" class="is-size-6 px-1 py-2 mb-5"
+              placeholder="Quantidade" min="0" required />
+            <label class="is-size-5" for="produto_valor">Valor de Compra:</label>
+            <input type="number" min="0.00" max="10000.00" step="0.01" id="produto_valor" name="produto_valor" class="is-size-6 px-1 py-2 mb-5"
+              placeholder="Valor de Compra" required />
+            <label class="is-size-5" for="produto_loja">Loja:</label>
+            <input type="Text" id="produto_loja" name="produto_loja" class="is-size-6 px-1 py-2 mb-5" placeholder="Loja"
+              required />
+            <div class="py-6">
+              <input type="submit" id="submit_cliente" value="Salvar" class="
+                    button
+                    is-large is-rounded
+                    button-font
+                    mx-1
+                    my-5
+                    button-green
+                  " />
+              <a name="" id="closeModal" onclick="closeModal()" class="button
+              is-large is-rounded
+              button-font
+              mx-1
+              my-5
+              ml-5
+              button-red">Cancelar</a>
+            </div>
+          </form>
         </section>
-        <footer class="p-6">
-          <button class="button is-large is-rounded button-font mx-1 my-5 button-green">Salvar</button>
-          <button id="closeModal" onclick="closeModal()" class="button is-large is-rounded button-font mx-1 my-5 ml-5 button-red">
-            Cancelar
-          </button>
-        </footer>
       </div>
     </div>
   </main>
 
   <!-- ALTERAR PARA MODAL -->
-  <!--<header role="banner">Novo Produto</header>
-
-      <form id="produto_form">
-        <label for="produto_cod">Código:</label>
-        <input
-          type="text"
-          id="produto_cod"
-          name="produto_cod"
-          placeholder="Código"
-          required
-        />
-        <label for="produto_nome">Produto:</label>
-        <input
-          type="text"
-          id="produto_nome"
-          name="produto_nome"
-          placeholder="Produto"
-          required
-        />
-        <label for="produto_qtd">Quantidade:</label>
-        <input
-          type="number"
-          id="produto_qtd"
-          name="produto_qtd"
-          placeholder="Quantidade"
-          min="0"
-          required
-        />
-        <label for="produto_valor">Valor de Compra:</label>
-        <input
-          type="text"
-          id="produto_valor"
-          name="produto_valor"
-          placeholder="Valor de Compra"
-          required
-        />
-        <label for="produto_loja">Loja:</label>
-        <input
-          type="Text"
-          id="produto_loja"
-          name="produto_loja"
-          placeholder="Loja"
-          required
-        />
+  <!--
         <div class="container-botoes">
           <input type="submit" id="submit_produto" value="Salvar" class="btn-form-verde"/>
        

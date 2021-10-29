@@ -15,7 +15,6 @@
     rgba(133, 178, 184, 0.938) 100%
   );
   --color-font: rgb(17, 17, 17);
-  --color-footer-contact: #ffff;
 }
 * {
   padding: 0;
@@ -36,10 +35,20 @@ body {
   font-family: "Merriweather";
   color: var(--color-font);
 }
+th, label {
+  font-family: "Fira Sans";
+  font-weight: 400;
+  color: var(--color-font);
+}
+td, input{
+  font-family: "Fira Sans";
+  font-weight: 400;
+  color: var(--color-font);
+}
 .button-font {
   font-family: "Fira Sans";
   font-weight: 500;
-  color: --color-font;
+  color: var(--color-font);
 }
 /* elementos */
 .card,
@@ -62,7 +71,15 @@ body {
 .button-red:hover {
   border: solid 1px red;
 }
+.table{
+  border: solid 1px #ffff;
+  background-color: var(--background-card);
+}
 
 .modal-background {
   background: var(--background-modal);
+}
+input, select{
+  border: solid 1px #ffff;
+  background-color: var(--background-card);
 }
