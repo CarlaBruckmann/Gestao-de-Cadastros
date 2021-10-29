@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap");
-:root{
+:root {
   --background-gradient: linear-gradient(
     68deg,
-    rgba(25, 100, 243, 0.3) 35.43%,
-    rgba(0, 172, 193, 0.3) 100%
+    rgb(162, 189, 238) 35.43%,
+    rgb(133, 178, 184) 100%
   );
-  --background-card: rgba(255, 255, 255, 0.49);
+  --background-card: rgba(255, 255, 255, 0.596);
   --background-button: rgba(255, 255, 255, 0.14);
-  --background-button-hover: #ffff; 
-  --color-font: rgb(17, 17, 17); 
+  --background-button-hover: #ffff;
+  --background-modal: linear-gradient(
+    68deg,
+    rgba(162, 189, 238, 0.932) 35.43%,
+    rgba(133, 178, 184, 0.938) 100%
+  );
+  --color-font: rgb(17, 17, 17);
   --color-footer-contact: #ffff;
 }
 * {
@@ -18,46 +23,46 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-body{
-  width: 100%;
-  height: 100%;
+body {
+  width: 100vw;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--background-gradient);
 }
 /* fontes */
-.title-font{
-  font-family:"Merriweather";
+.title-font {
+  font-family: "Merriweather";
   color: var(--color-font);
 }
-.button-font{
+.button-font {
   font-family: "Fira Sans";
   font-weight: 500;
   color: --color-font;
 }
 /* elementos */
-.card{
- background: var(--background-card);
- border: solid 1px #ffff;
- border-radius: 0 50px 0 0;
+.card,
+.modal-card {
+  background: var(--background-card);
+  border: solid 1px #ffff;
+  border-radius: 0 50px 0 0;
 }
-.button{
+.button {
   background: var(--background-button);
   border: solid 1px #ffff;
 }
-.button:hover{
+.button:hover {
   background-color: var(--background-button-hover);
   border: solid 1px #ffff;
 }
-.button-green:hover{
+.button-green:hover {
   border: solid 1px greenyellow;
 }
-.button-red:hover{
+.button-red:hover {
   border: solid 1px red;
 }
-.footer,
-.icon-contact{
-  background-color:  inherit;
-  padding-top:0;
-  color: var(--color-footer-contact);
-  font-size: 16px;
+
+.modal-background {
+  background: var(--background-modal);
 }
