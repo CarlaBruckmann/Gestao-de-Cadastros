@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <title>Cadastro de Clientes</title>
 </head>
+
 <body>
   <main role="main" class="container p-6">
     <div class="card p-6">
       <h1 class="has-text-centered title is-size-2 is-size-3-mobile title-font">
         Cadastro de Clientes
       </h1>
-      <button id="btnOpenModal" onclick="openModal()"
-        class="button is-large is-rounded button-font button-green mx-1 my-5 ">
+      <button id="openModal" class="button is-large is-rounded button-font button-green mx-1 my-5">
         Cadastrar Cliente
       </button>
       <table class="table is-hoverable is-fullwidth my-5">
@@ -71,24 +71,24 @@
           </h2>
         </header>
         <section class="px-6">
-          <form class="is-flex is-flex-direction-column">
-            <label class="is-size-5" for="cliente_nome">Nome Completo:</label>
-            <input type="text" id="cliente_nome" name="cliente_nome" class="is-size-6 px-1 py-2 mb-5"
+          <form id="form" class="is-flex is-flex-direction-column">
+            <label class="is-size-5" for="clientName">Nome Completo:</label>
+            <input type="text" id="clientName" name="clientName" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="Nome Completo" required />
-            <label class="is-size-5" for="cliente_cpf">CPF:</label>
-            <input type="text" id="cliente_cpf" name="cliente_cpf" class="is-size-6 px-1 py-2 mb-5"
+            <label class="is-size-5" for="clientCpf">CPF:</label>
+            <input type="text" id="clientCpf" name="clientCpf" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="xxx.xxx.xxx-xx" max-length="11" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
-            <label class="is-size-5" for="cliente_tel">Celular:</label>
-            <input type="tel" id="cliente_tel" name="cliente_tel" class="is-size-6 px-1 py-2 mb-5"
+            <label class="is-size-5" for="clientTel">Celular:</label>
+            <input type="tel" id="clientTel" name="clientTel" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="xx 9xxxx-xxxx" pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" required />
-            <label class="is-size-5" for="cliente_email">Email:</label>
-            <input type="email" id="cliente_email" name="cliente_email" class="is-size-6 px-1 py-2 mb-5"
+            <label class="is-size-5" for="clientEmail">Email:</label>
+            <input type="email" id="clientEmail" name="clientEmail" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="Email" required />
-            <label class="is-size-5" for="cliente_cidade">Cidade:</label>
-            <input type="text" id="cliente_cidade" name="cliente_cidade" class="is-size-6 px-1 py-2 mb-5"
+            <label class="is-size-5" for="clientCity">Cidade:</label>
+            <input type="text" id="clientCity" name="clientCity" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="Cidade" required />
-            <label class="is-size-5" for="cliente_UF">UF:</label>
-            <select id="cliente_UF" name="cliente_UF" class="is-size-6 px-1 py-2 mb-5">
+            <label class="is-size-5" for="clientUf">UF:</label>
+            <select id="clientUf" name="clientUf" class="is-size-6 px-1 py-2 mb-5 modal-field" required>
               <option value="">Estado</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -119,7 +119,7 @@
               <option value="TO">Tocantins</option>
             </select>
             <div class="py-6">
-              <input type="submit" id="submit_cliente" value="Salvar" class="
+              <input type="submit" id="saveClient" value="Salvar" class="
                     button
                     is-large is-rounded
                     button-font
@@ -127,13 +127,15 @@
                     my-5
                     button-green
                   " />
-              <a name="" id="closeModal" onclick="closeModal()" class="button
-              is-large is-rounded
-              button-font
-              mx-1
-              my-5
-              ml-5
-              button-red">Cancelar</a>
+              <input type="button" name="" id="closeModal" value="Cancelar" class="
+                    button
+                    is-large is-rounded
+                    button-font
+                    mx-1
+                    my-5
+                    ml-5
+                    button-red
+                  " />
             </div>
           </form>
         </section>
