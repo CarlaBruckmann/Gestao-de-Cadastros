@@ -37,7 +37,7 @@ body {
 }
 th, label {
   font-family: "Fira Sans";
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-font);
 }
 td, input{
@@ -72,10 +72,8 @@ td, input{
   border: solid 1px red;
 }
 .table{
-  border: solid 1px #ffff;
   background-color: var(--background-card);
 }
-
 .modal-background {
   background: var(--background-modal);
 }
