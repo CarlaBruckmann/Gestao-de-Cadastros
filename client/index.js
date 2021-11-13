@@ -2,8 +2,10 @@
 let modal = document.getElementById("modal");
 let fields = document.querySelectorAll(".modal-field");
 
-document.getElementById("openModal").addEventListener("click", openModal);
-document.getElementById("closeModal").addEventListener("click", closeModal);
+document.getElementById("openModal")
+  .addEventListener("click", openModal);
+document.getElementById("closeModal")
+  .addEventListener("click", closeModal);
 function openModal() {
   modal.classList.add("is-active");
 }
@@ -55,12 +57,18 @@ const saveClient = () => {
       city: document.getElementById("clientCity").value,
       uf: document.getElementById("clientUf").value
     };
-    createClient(client);
-    updateTable()
+    const index = document.getElementById('clientName').dataset.index
+    if(index == 'new'){
+      createClient(client);
+      updateTable()
+    }else{
+      updateClient(index,client)
+      updateTable()
+    }
   }
 };
 
-const createRow = (client) => {
+const createRow = (client, index) => {
   const newRow = document.createElement('tr');
   newRow.innerHTML = `
     <td class="pt-4">${client.name}</td>
@@ -70,10 +78,10 @@ const createRow = (client) => {
     <td class="pt-4">${client.city}</td>
     <td class="pt-4">${client.uf}</td>
     <td>
-      <button class="button is-warning is-outlined is-rounded td-buttons m-1" data-action="edit">
+      <button id="edit-${index}" class="button is-warning is-outlined is-rounded td-buttons m-1">
         Editar
       </button>
-        <button class="button is-danger is-outlined is-rounded m-1" data-action="delete">
+        <button id="delete-${index}" class="button is-danger is-outlined is-rounded m-1">
         Excluir
       </button>
     </td>
@@ -84,7 +92,6 @@ const createRow = (client) => {
 const clearTable = () => {
   const rows = document.querySelectorAll('#tableClient>tbody tr')
   rows.forEach(row => row.parentNode.removeChild(row))
-
 }
 
 const updateTable = () => {
@@ -93,15 +100,45 @@ const updateTable = () => {
   dbClient.forEach(createRow);
 };
 
+const fillFields = (client) => {
+  document.getElementById('clientName').value = client.name
+  document.getElementById("clientCpf").value = client.cpf
+  document.getElementById("clientTel").value = client.tel
+  document.getElementById("clientEmail").value = client.email
+  document.getElementById("clientCity").value = client.city
+  document.getElementById("clientUf").value = client.uf
+  document.getElementById('clientName').dataset.index = client.index
+}
+
+const editClient = (index) => {
+  const client = readClient()[index]
+  client.index = index
+  fillFields(client)
+  openModal()
+}
+
 const editDelete = (event) => {
   if (event.target.type == 'submit') {
-    console.log(event.target.dataset.action)
+
+    const [action, index] = event.target.id.split('-')
+
+    if (action == 'edit'){
+      editClient(index)
+    } else {
+      const client = readClient()[index]
+      const response = confirm(`Deseja realmente excluir o cliente ${client.name}`)
+      if(response){
+        deleteClient(index)
+        updateTable()
+      }
+    }
   }
 }
 
 updateTable();
 
 //CRUD Events
-document.getElementById("saveClient").addEventListener("click", saveClient);
+document.getElementById("saveClient")
+  .addEventListener("click", saveClient);
 document.querySelector('#tableClient>tbody')
   .addEventListener('click', editDelete)
