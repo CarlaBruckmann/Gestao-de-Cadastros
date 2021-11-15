@@ -77,6 +77,12 @@ td, input{
 .modal-background {
   background: var(--background-modal);
 }
+.modal-background{
+  overflow-y: initial;
+}
+.modal-card{
+  overflow-y: auto;
+}
 input, select{
   border: solid 1px #ffff;
   background-color: var(--background-card);
