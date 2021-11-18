@@ -4,33 +4,43 @@
 
 ### :rocket: Projeto desenvolvido para o segundo desafio da `formação FullStack` do  `Hiring Coders` - plataforma `Gama Academy`.  
 
-### :dart: Objetivo: construir um sistema de `Gestão de Cadastro`, onde é possível realizar cadastro de cliente ou produto, e os dados ficam salvos `Local Storage`. 
+### :dart: Objetivo: construir um sistema de `Gestão de Cadastros - Clientes e Produtos`, onde é possível realizar o `CRUD (Create, Read, Update, Delete)` e os dados ficam salvos no `Local Storage`. 
 
-### :white_check_mark: Tecnologias utilizadas: `HTML5`, `CSS3` e `JavaScript`.
+### :white_check_mark: Tecnologias utilizadas: `Bulma`,`HTML5`, `CSS3` e `JavaScript`.
 
 #### 🌎 *[GitHub Pages](https://carlabruckmann.github.io/GestaoDeCadastros-HiringCoders/)*
 
 
 
 [Preview - Home]
-<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/Captura%20de%20Tela%202021-07-25%20%C3%A0s%2000.07.43.png?raw=true" alt="preview home" width="100%"/>
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/Home.png?raw=true alt="preview home" width="100%"/>
 
 <br>
 
-[Preview - Form. Produto]
-<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/Captura%20de%20Tela%202021-07-25%20%C3%A0s%2000.09.22.png?raw=true" alt="preview home" width="100%"/>
+[Preview - Cadastro de Cliente]
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/CadastroClientes.png?raw=true alt="preview home" width="100%"/>
 
 <br>
 
-[Preview - Form. Produto Cadastrado]
-<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/Captura%20de%20Tela%202021-07-25%20%C3%A0s%2000.10.05.png?raw=true" alt="preview home" width="100%"/>
+[Preview - Modal - Novo Cadastro de Cliente]
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/ModalClientes.png?raw=true alt="preview home" width="100%"/>
 
 <br>
 
-[Preview - Form. Cliente]
-<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/Captura%20de%20Tela%202021-07-25%20%C3%A0s%2000.08.04.png?raw=true" alt="preview home" width="100%"/>
+[Preview - Local Storage - Cliente Cadastrado]
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/LocalClientes.png?raw=true alt="preview home" width="100%"/>
 
 <br>
 
-[Preview - Local Storage]
-<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/Captura%20de%20Tela%202021-07-25%20%C3%A0s%2000.22.06.png?raw=true" alt="test" width="100%"/>
+[Preview - Cadastro de Produtos]
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/CadastroProdutos.png?raw=true alt="preview home" width="100%"/>
+
+<br>
+
+[Preview - Modal - Novo Cadastro de Produto]
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/ModalProdutos.png?raw=true alt="preview home" width="100%"/>
+
+<br>
+
+[Preview - Local Storage - Produto Cadastrado]
+<img src="https://github.com/CarlaBruckmann/GestaoDeCadastros-HiringCoders/blob/master/previews/LocalProdutos.png?raw=true alt="test" width="100%"/>
