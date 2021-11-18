@@ -11,8 +11,8 @@
   --background-button-hover: #ffff;
   --background-modal: linear-gradient(
     68deg,
-    rgba(162, 189, 238, 0.932) 35.43%,
-    rgba(133, 178, 184, 0.938) 100%
+    rgba(162, 189, 238, 0.918) 35.43%,
+    rgba(133, 178, 184, 0.986) 100%
   );
   --color-font: rgb(17, 17, 17);
 }
@@ -75,10 +75,8 @@ td, input{
   background-color: var(--background-card);
 }
 .modal-background {
-  background: var(--background-modal);
-}
-.modal-background{
   overflow-y: initial;
+  background: var(--background-modal);
 }
 .modal-card{
   overflow-y: auto;
