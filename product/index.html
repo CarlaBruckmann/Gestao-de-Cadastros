@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <title>Cadastro de Produtos</title>
 </head>
+
 <body>
   <main role="main" class="container p-6">
     <div class="card p-6">
       <h1 class="has-text-centered title is-size-2 is-size-3-mobile title-font">
         Cadastro de Produtos
       </h1>
-      <button id="btnOpenModal" onclick="openModal()"
-        class="button is-large is-rounded button-font button-green mx-1 my-5">
+      <button id="openModal" class="button is-large is-rounded button-font button-green mx-1 my-5">
         Cadastrar Produto
       </button>
-      <table class="table is-hoverable is-fullwidth my-5">
-        <thead>
+      <table id="tableProduct" class="table is-narrow is-hoverable is-fullwidth my-5">
+        <thead class="is-size-5">
           <tr>
             <th title="Código">Código</th>
             <th title="Descrição">Descrição</th>
@@ -35,22 +35,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>M12020</td>
-            <td>Macbook Air 13.3</td>
-            <td>2</td>
-            <td>9.599,00</td>
-            <td>Iplace FLN</td>
-            <td class="is-flex is-flex-direction-row">
-              <button class="button is-warning is-outlined is-rounded">
-                <span>Editar</span>
-              </button>
-              <button class="button is-danger is-outlined is-rounded ml-5">
-                <span>Excluir</span>
-              </button>
-            </td>
-          </tr>
+        <tbody class="is-size-6">
         </tbody>
       </table>
       <a href="../index.html" class="button is-large is-rounded button-font mx-1 my-5">Voltar</a>
@@ -69,24 +54,24 @@
           </h2>
         </header>
         <section class="px-6">
-          <form class="is-flex is-flex-direction-column">
-            <label class="is-size-5" for="produto_cod">Código:</label>
-            <input type="text" id="produto_cod" name="produto_cod" class="is-size-6 px-1 py-2 mb-5" placeholder="Código"
-              required />
-            <label class="is-size-5" for="produto_nome">Produto:</label>
-            <input type="text" id="produto_nome" name="produto_nome" class="is-size-6 px-1 py-2 mb-5"
+          <form id="form" class="is-flex is-flex-direction-column">
+            <label class="is-size-5" for="productCod">Código:</label>
+            <input type="text" id="productCod" name="productCod" class="is-size-6 px-1 py-2 mb-5 modal-field"
+              placeholder="Código" data-index="new" required />
+            <label class="is-size-5" for="productName">Produto:</label>
+            <input type="text" id="productName" name="productName" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="Produto" required />
-            <label class="is-size-5" for="produto_qtd">Quantidade:</label>
-            <input type="number" id="produto_qtd" name="produto_qtd" class="is-size-6 px-1 py-2 mb-5"
+            <label class="is-size-5" for="productQtd">Quantidade:</label>
+            <input type="number" id="productQtd" name="productQtd" class="is-size-6 px-1 py-2 mb-5 modal-field"
               placeholder="Quantidade" min="0" required />
-            <label class="is-size-5" for="produto_valor">Valor de Compra:</label>
-            <input type="number" min="0.00" max="10000.00" step="0.01" id="produto_valor" name="produto_valor" class="is-size-6 px-1 py-2 mb-5"
-              placeholder="Valor de Compra" required />
-            <label class="is-size-5" for="produto_loja">Loja:</label>
-            <input type="Text" id="produto_loja" name="produto_loja" class="is-size-6 px-1 py-2 mb-5" placeholder="Loja"
-              required />
+            <label class="is-size-5" for="productPrice">Valor de Compra:</label>
+            <input type="number" min="0.00" max="10000.00" step="0.01" id="productPrice" name="productPrice"
+              class="is-size-6 px-1 py-2 mb-5 modal-field" placeholder="Valor de Compra" required />
+            <label class="is-size-5" for="productStore">Loja:</label>
+            <input type="Text" id="productStore" name="productStore" class="is-size-6 px-1 py-2 mb-5 modal-field"
+              placeholder="Loja" required />
             <div class="py-6">
-              <input type="submit" id="submit_cliente" value="Salvar" class="
+              <input type="submit" id="saveProduct" value="Salvar" class="
                     button
                     is-large is-rounded
                     button-font
@@ -94,20 +79,21 @@
                     my-5
                     button-green
                   " />
-              <a name="" id="closeModal" onclick="closeModal()" class="button
-              is-large is-rounded
-              button-font
-              mx-1
-              my-5
-              ml-5
-              button-red">Cancelar</a>
+              <input type="button" name="" id="closeModal" value="Cancelar" class="
+                    button
+                    is-large is-rounded
+                    button-font
+                    mx-1
+                    my-5
+                    ml-5
+                    button-red
+                  " />
             </div>
           </form>
         </section>
       </div>
     </div>
   </main>
-
   <script src="https://kit.fontawesome.com/ec6c9f4d17.js" crossorigin="anonymous"></script>
   <script src="./index.js"></script>
   <script src="../assets/js/modal.js"></script>
